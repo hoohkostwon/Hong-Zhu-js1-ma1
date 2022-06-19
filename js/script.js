@@ -75,12 +75,26 @@ printListItems (cats);
 //Return the HTML from the function.
 //Call the function and pass in the cats array as the argument.
 //Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container./
-function createCats (cats) {
+
+function createCats (cats){
     let html= "";
-    for (let i=0; i<cats.length;i++) {
+    for (let i=0; i<cats.length;i++){
+        let catsAge = "unknown";
 
-    }
-
+        if (cats[i].age) {
+            catsAge = cats[i].age
+        }
+        
+        html += `<div class= "cat-container">
+                   <h5> ${cats[i].name} </h5>
+                   <p> Age: ${catsAge} </P>
+                </div>`;
+        }
+    
+    return html;
 }
 
-
+const newHTML = createCats (cats);
+const catsContainer = document.querySelector (".cat-container");
+catsContainer.innerHTML = newHTML;
+    
