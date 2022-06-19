@@ -1,16 +1,3 @@
-const cats = [
-    {
-        name: "Blob",
-        age: 10
-    },
-    {
-        name: "Harold",
-    },
-    {
-        name: "Blurt",
-        age: 21
-    }
-];
 
 //Q1
 //Create an object called cat.
@@ -52,3 +39,48 @@ for (let i=0; i< paragraphs.length; i++){
 const resultsContainer = document.querySelector (".results")
 resultsContainer.innerHTML= "<p>New paragraph</p>";
 resultsContainer.style.backgroundColor="yellow";
+
+//Q7
+//Create a function that has one parameter called list.
+//Inside the function, loop through the list parameter and console log the name property in each object.
+//Call the function and pass in the cats variable in the script.js file in the repo.
+
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
+function printListItems (list){
+    for (let i=0;i<list.length; i++) {
+        console.log (list[i].name);
+    }
+} 
+
+printListItems (cats);
+
+//Q8
+//Create a function called createCats. The function will have one parameter called cats.
+//Inside the function loop through the value passed in as cats and create HTML for each object in the array.
+//Wrap each item in a div, each name property in an h5 tag and each age property in a p tag.
+//If the age property is missing, it should display “Age unknown” instead.
+//Return the HTML from the function.
+//Call the function and pass in the cats array as the argument.
+//Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container./
+function createCats (cats) {
+    let html= "";
+    for (let i=0; i<cats.length;i++) {
+
+    }
+
+}
+
+
